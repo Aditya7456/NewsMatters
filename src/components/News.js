@@ -148,19 +148,6 @@ export class News extends Component {
     },
     {
       "source": {
-        "id": "abc-news",
-        "name": "ABC News"
-      },
-      "author": "ABC News",
-      "title": "White House releases RFK Jr.-led report on chronic disease - ABC News",
-      "description": null,
-      "url": "https://abcnews.go.com/Politics/white-house-releases-rfk-jr-led-report-chronic/story?id\\\\u003d122076156",
-      "urlToImage": null,
-      "publishedAt": "2025-05-22T16:06:50Z",
-      "content": null
-    },
-    {
-      "source": {
         "id": null,
         "name": "NPR"
       },
@@ -213,19 +200,6 @@ export class News extends Component {
     },
     {
       "source": {
-        "id": "abc-news",
-        "name": "ABC News"
-      },
-      "author": "ABC News",
-      "title": "How penguin poop can help to mitigate climate change - ABC News",
-      "description": null,
-      "url": "https://abcnews.go.com/US/penguin-poop-mitigate-climate-change/story?id\\\\u003d122032611",
-      "urlToImage": null,
-      "publishedAt": "2025-05-22T15:10:08Z",
-      "content": null
-    },
-    {
-      "source": {
         "id": null,
         "name": "Sports Illustrated"
       },
@@ -266,7 +240,7 @@ export class News extends Component {
         <div className="row my-3">
             {this.state.articles.map((ele) => {
                return <div className="col-md-4" key={ele.url}>
-                <NewsItem title={ele.title} description={ele.description} imageUrl={ele.urlToImage} newsUrl={ele.url}/>
+                <NewsItem title={ele.title.slice(0,45)} description={ele.description.slice(0,150)} imageUrl={ele.urlToImage} newsUrl={ele.url}/>
             </div>
             })}
             
